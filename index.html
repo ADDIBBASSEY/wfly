@@ -18,15 +18,41 @@
     </nav>
   </header>
 
-  <section class="search-section">
-    <h2>Find Your Flight</h2>
-    <form id="search-form">
-      <input type="text" id="from" placeholder="From" required />
-      <input type="text" id="to" placeholder="To" required />
-      <input type="date" id="departure-date" required />
-      <button type="submit">Search</button>
-    </form>
-  </section>
+ <section class="search-section">
+  <h2>Find Your Flight</h2>
+  <form id="search-form">
+    <!-- Journey Type -->
+    <select id="journey-type" required>
+      <option value="">Journey Type</option>
+      <option value="one-way">One-way</option>
+      <option value="round-trip">Round-trip</option>
+    </select>
+
+    <!-- From / To -->
+    <input type="text" id="from" placeholder="From" required />
+    <input type="text" id="to" placeholder="To" required />
+
+    <!-- Dates -->
+    <input type="date" id="departure-date" required />
+    <input type="date" id="return-date" style="display:none;" />
+
+    <!-- Passengers -->
+    <input type="number" id="passengers" min="1" value="1" placeholder="Passengers" required />
+
+    <!-- Class -->
+    <select id="travel-class" required>
+      <option value="">Class</option>
+      <option value="economy">Economy</option>
+      <option value="premium">Premium Economy</option>
+      <option value="business">Business</option>
+      <option value="first">First</option>
+    </select>
+
+    <!-- Submit -->
+    <button type="submit">Search</button>
+  </form>
+</section>
+
 
   <section id="results" class="results-section">
     <h2>Available Flights</h2>
