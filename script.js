@@ -19,6 +19,35 @@ document.getElementById('journey-type').addEventListener('change', function () {
 
   const resultsDiv = document.getElementById('flight-results');
   resultsDiv.innerHTML = '';
+  const tripSegmentsContainer = document.getElementById('trip-segments');
+const addSegmentBtn = document.getElementById('add-segment-btn');
+const journeyType = document.getElementById('journey-type');
+
+journeyType.addEventListener('change', function () {
+  if (this.value === 'multi-city') {
+    addSegmentBtn.style.display = 'inline-block';
+  } else {
+    addSegmentBtn.style.display = 'none';
+    // Reset to single segment if not multi-city
+    const segments = tripSegmentsContainer.querySelectorAll('.trip-segment');
+    segments.forEach((seg, index) => {
+      if (index > 0) seg.remove();
+    });
+  }
+});
+
+// Add new segment
+addSegmentBtn.addEventListener('click', () => {
+  const segment = document.createElement('div');
+  segment.className = 'trip-segment';
+  segment.innerHTML = `
+    <input type="text" name="from" placeholder="From" required />
+    <input type="text" name="to" placeholder="To" required />
+    <input type="date" name="date" required />
+  `;
+  tripSegmentsContainer.appendChild(segment);
+});
+
 
   // Dummy data for now
   const flights = [
