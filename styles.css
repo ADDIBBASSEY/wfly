@@ -131,4 +131,18 @@ nav a:hover {
   flex-wrap: wrap;
   justify-content: center;
 }
+#loading {
+  display: none;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #fff;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
 
