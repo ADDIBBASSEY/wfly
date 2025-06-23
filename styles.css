@@ -124,3 +124,11 @@ nav a:hover {
 .flight-card button:hover {
   transform: scale(1.05);
 }
+.trip-segment {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
