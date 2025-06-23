@@ -1,46 +1,126 @@
-styles.css
-body {
-  font-family: Arial, sans-serif;
+/* Reset and base styles */
+* {
   margin: 0;
-  background: #f0f2f5;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #0f2027, #203a43);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header {
-  background: #003366;
-  color: white;
-  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+header h1 {
+  font-size: 2rem;
+}
+
 nav a {
-  margin-left: 20px;
-  color: white;
+  color: #fff;
   text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffd700;
 }
 
 .search-section {
-  padding: 2rem;
-  background: #ffffff;
+  padding: 3rem 1rem;
   text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
 }
 
-.search-section input, .search-section button {
-  padding: 0.5rem;
+.search-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.search-section input,
+.search-section button {
+  padding: 0.8rem;
   margin: 0.5rem;
   font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+}
+
+.search-section input {
+  width: 30%;
+}
+
+.search-section button {
+  background-color: #ffd700;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-section button:hover {
+  background-color: #ffc400;
 }
 
 .results-section {
   padding: 2rem;
+  color: #fff;
 }
 
 .flight-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.1);
   padding: 1rem;
   margin: 1rem 0;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.flight-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.flight-card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  background-color: #ffd700;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.flight-card button:hover {
+  transform: scale(1.05);
 }
