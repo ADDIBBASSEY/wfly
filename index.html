@@ -26,6 +26,7 @@
       <option value="">Journey Type</option>
       <option value="one-way">One-way</option>
       <option value="round-trip">Round-trip</option>
+      <option value="multi-city">Multi-city</option>
     </select>
 
     <!-- From / To -->
@@ -37,8 +38,8 @@
     <input type="date" id="return-date" style="display:none;" />
 
     <!-- Passengers -->
-    <input type="number" id="passengers" min="1" value="1" placeholder="Passengers" required />
-
+     <input type="number" id="adults" min="1" value="1" placeholder="Adults" required />
+    <input type="number" id="children" min="0" value="0" placeholder="Children" />
     <!-- Class -->
     <select id="travel-class" required>
       <option value="">Class</option>
