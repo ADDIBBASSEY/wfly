@@ -102,4 +102,12 @@ document.getElementById('search-form').addEventListener('submit', function (e) {
     alert('Flight search completed! Check console for simulated response.');
   }, 2000);
 });
+function showLoading() {
+  document.getElementById('loading').style.display = 'block';
+}
+
+function hideLoading() {
+  document.getElementById('loading').style.display = 'none';
+}
+
 
