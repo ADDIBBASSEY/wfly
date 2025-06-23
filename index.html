@@ -1,0 +1,38 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flight Booking</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>SkyBook</h1>
+    <nav>
+      <a href="#">Flights</a>
+      <a href="#">Hotels</a>
+      <a href="#">Deals</a>
+    </nav>
+  </header>
+
+  <section class="search-section">
+    <h2>Find Your Flight</h2>
+    <form id="search-form">
+      <input type="text" id="from" placeholder="From" required />
+      <input type="text" id="to" placeholder="To" required />
+      <input type="date" id="departure-date" required />
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  <section id="results" class="results-section">
+    <h2>Available Flights</h2>
+    <div id="flight-results"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
