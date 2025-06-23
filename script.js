@@ -69,3 +69,37 @@ addSegmentBtn.addEventListener('click', () => {
     resultsDiv.appendChild(card);
   });
 });
+document.getElementById('search-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const journey = journeyType.value;
+  const classType = document.getElementById('travel-class').value;
+  const adults = document.getElementById('adults').value;
+  const children = document.getElementById('children').value;
+
+  const segments = [...tripSegmentsContainer.querySelectorAll('.trip-segment')].map(seg => {
+    return {
+      from: seg.querySelector('input[name="from"]').value,
+      to: seg.querySelector('input[name="to"]').value,
+      date: seg.querySelector('input[name="date"]').value
+    };
+  });
+
+  const requestData = {
+    journey,
+    classType,
+    adults,
+    children,
+    segments
+  };
+
+  console.log('Searching flights with:', requestData);
+  showLoading();
+
+  // Simulated API call delay
+  setTimeout(() => {
+    hideLoading();
+    alert('Flight search completed! Check console for simulated response.');
+  }, 2000);
+});
+
