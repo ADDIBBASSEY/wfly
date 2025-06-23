@@ -10,14 +10,9 @@ document.getElementById('journey-type').addEventListener('change', function () {
     returnDateInput.style.display = 'none';
     returnDateInput.required = false;
   }
-});
+}),
 
-
-  const from = document.getElementById('from').value;
-  const to = document.getElementById('to').value;
-  const date = document.getElementById('departure-date').value;
-
-  const resultsDiv = document.getElementById('flight-results');
+ ( const resultsDiv = document.getElementById('flight-results');
   resultsDiv.innerHTML = '';
   const tripSegmentsContainer = document.getElementById('trip-segments');
 const addSegmentBtn = document.getElementById('add-segment-btn');
