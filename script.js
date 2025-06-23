@@ -1,5 +1,17 @@
 document.getElementById('search-form').addEventListener('submit', function(e) {
   e.preventDefault();
+  // Toggle return date based on journey type
+document.getElementById('journey-type').addEventListener('change', function () {
+  const returnDateInput = document.getElementById('return-date');
+  if (this.value === 'round-trip') {
+    returnDateInput.style.display = 'inline-block';
+    returnDateInput.required = true;
+  } else {
+    returnDateInput.style.display = 'none';
+    returnDateInput.required = false;
+  }
+});
+
 
   const from = document.getElementById('from').value;
   const to = document.getElementById('to').value;
